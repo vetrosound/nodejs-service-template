@@ -5,7 +5,14 @@ node_js:
 cache:
   yarn: true
   directories:
-    - node_modules
+    - ~/.cache
+    - ~/.sonar/cache
+
+addons:
+  sonarcloud:
+    organization: vetrosound
+    token:
+      secure: SApipfUP8beWFrrWocUOCZCu2ajfIBYERxfSFdi+Vp0u+OLEXvjlPfAhdqOhMthEgZ3Mkz/tdoJv7JjTB8wE4/gjLJRYvVuZKn3C1PS0d25QvC2PH1QdyX9KOAK/WeQIrPCoTVjRQ3wzAi54v2sEiAxyihBBX3904rUSKzYY+CU2Glu87tdnCyPcrvQNEBaRmlTO5Oo5BeiMhYKtHdk+uMTAQkku5O8Ziz8VL0glE387d1UfA5STI92uv9doBWQ0OQY+SqpOeadhbnXe5vnBguF4qjupjEln29gaEfL4AeTkZqCB80Zbvbfv3IOwfFTrT95t+fDQZd8qdiUob17r/RsGBTvtdVZ43W0t4Lq4RSJAAOrH48ZPpqjEoiL29NRK35TdKeWl+niY6HxblbEsdBTgU0wzRo2RLWRSn0JpHz2GhOGeLXSobfvyonCWC8YhUoEj07h1qDnWkduqGVCi/N38hVM5jNqx8B5cA9CD9ivnk7TqS+p6dfKBQmrgd8QfcsUd3HMyQWu4ncyTWgq4OfPrxA3WciLqtBugh16IYzg3MqV7KEugeY6btoHSeYiniuKDoIpu0x2hqelU3fcPMqmFQhA+uIAyg8BslCeAFcXA1VemGdtaTOpsSl9964tzveeR59AZVFcdXQvIsR6A+Zs4msNiqTO/rFT09SQmyg0=
 
 branches:
   only:
@@ -19,6 +26,7 @@ script:
   - yarn build
   - yarn test
   - yarn test:e2e
+  - sonar-scanner
 
 notifications:
   email: false
