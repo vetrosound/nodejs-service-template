@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  nodejs_service_template:
+    build:
+      context: .
+      cache_from:
+        - node:lts
+    image: vetrosound/nodejs-service-template:latest
+    container_name: nodejs-service-template
+    ports:
+      - "8443:8443"

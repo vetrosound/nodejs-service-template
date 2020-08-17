@@ -30,15 +30,11 @@ $ yarn test:e2e
 $ yarn test:cov
 ```
 
-## Building a docker image
+## Building and running the docker image
 
-`docker build --tag node-template .`
+`docker-compose up -d`
 
 Cleanup intermediate images
 `docker image prune -f`
 
-## Running the docker image
-
-`docker run --detach --name node-template --publish 8443:8443 node-template`
-
-Then visit `http://localhost:8443/chris` in a browser
+Then visit `http://localhost:8443/chris` in a browser.

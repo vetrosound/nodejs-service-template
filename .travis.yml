@@ -27,6 +27,7 @@ script:
   - yarn test
   - yarn test:e2e
   - sonar-scanner
+  - docker-compose build --force-rm
 
 notifications:
   email: false
