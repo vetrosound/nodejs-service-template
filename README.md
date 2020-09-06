@@ -37,4 +37,4 @@ $ yarn test:cov
 Cleanup intermediate images
 `docker image prune -f`
 
-Then visit `http://localhost:8443/chris` in a browser.
+Then visit `http://localhost:8080/chris` in a browser.
