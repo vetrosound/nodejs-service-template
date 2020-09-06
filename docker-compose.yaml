@@ -8,4 +8,4 @@ services:
     image: vetrosound/nodejs-service-template:latest
     container_name: nodejs-service-template
     ports:
-      - "8443:8443"
+      - "8080:8080"
