@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/vetrosound/nodejs-service-template.svg?branch=main)](https://travis-ci.com/vetrosound/nodejs-service-template)
+
+
 ## Installation
 
 ```bash
